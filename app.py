@@ -37,10 +37,6 @@ df["ARS"] = df["USD"] * dolar
 categoria = st.sidebar.selectbox("Seleccioná una categoría", df["Categoría"].unique())
 filtro = df[df["Categoría"] == categoria][["Producto", "USD", "ARS"]].copy()
 
-# Formateo de moneda
-filtro["USD"] = filtro["USD"].apply(lambda x: f"US$ {x:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
-filtro["ARS"] = filtro["ARS"].apply(lambda x: f"${int(round(x)):,}".replace(",", "."))
-
 # Centrado CSS
 st.markdown("""
 <style>
@@ -51,8 +47,13 @@ thead tr th, tbody tr td {
 </style>
 """, unsafe_allow_html=True)
 
-# Mostrar tabla
+filtro["USD"] = filtro["USD"].apply(lambda x: f"US$ {x:,.2f}")
+filtro["ARS"] = filtro["ARS"].apply(lambda x: f"${x:,.2f}")
+
 st.dataframe(filtro, use_container_width=True)
+
+
+
 
 
 
