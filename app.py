@@ -25,19 +25,4 @@ st.title("Precios de celulares")
 st.write(f"Dólar venta informal: {dolar_venta} ARS")
 st.dataframe(df)
 
-# url = 'https://mercados.ambito.com/dolar/informal/variacion'
-# headers = {
-#     'User-Agent': 'Mozilla/5.0'
-# }
-# res = requests.get(url, headers=headers)
-# data = res.json()
-# print(data)
-
-# print("Compra:", data['compra'])
-# print("Venta:", data['venta'])
-# print("Variación:", data['variacion'])
-
-# IPhone15 = 770
-# valor = (float(data['venta'].replace(',', '.')) + 10) * IPhone15
-# print("El valor del IPhone 15 en pesos es: ", valor)
 
