@@ -3,6 +3,7 @@
 # Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass  habilitaar powershell
 # .\AppleBite\Scripts\Activate.ps1   para activar el environment   
 # pip install libreria
+
 import streamlit as st
 import pandas as pd
 import requests
