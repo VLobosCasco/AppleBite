@@ -9,7 +9,8 @@ import pandas as pd
 import requests
 
 st.set_page_config(page_title="AppleBite", layout="wide")
-st.title("📱 AppleBite - Catálogo de Productos")
+st.title("📱 AppleBite ")
+st.subheader("Catálogo de Productos")  # opción simple
 
 # Obtener cotización dólar blue con margen
 url = 'https://mercados.ambito.com/dolar/informal/variacion'
