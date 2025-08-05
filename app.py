@@ -25,12 +25,12 @@ st.markdown(f"Cotización del dólar: **${dolar:,.2f} ARS**", unsafe_allow_html=
 
 # Datos
 data = {
-    "Producto": ["iPhone 13 - 128GB", "iPhone 14 - 128GB", "iPhone 15 - 128GB", "iPhone 16 - 128GB", "iPhone 16E - 128GB", "iPhone 16 Pro - 256GB",
+    "Producto": ["iPhone 13 - 128GB", "iPhone 14 - 128GB", "iPhone 15 - 128GB", "iPhone 16 - 128GB", "iPhone 16 Pro - 128GB",
                  "iPad 10", "iPad 11", "iPad Air 13 M2",
                  "Apple Watch SE 2 (40mm)", "Apple Watch SE 2 (44mm)", "Apple Watch S9 (41mm)", "Apple Watch S10 (42mm)",
                  "Adaptador original 20W"],
-    "Categoría": ["Celulares"] * 6 + ["Tablets"] * 3 + ["Reloj"] * 4 + ["Accesorios"],
-    "USD": [560, 670, 750, 850, 685, 1100, 600, 500, 890, 310, 330, 450, 460, 45]
+    "Categoría": ["Celulares"] * 5 + ["Tablets"] * 3 + ["Reloj"] * 4 + ["Accesorios"],
+    "USD": [520, 600, 720, 820, 980, 600, 500, 890, 310, 330, 450, 460, 45]
 }
 df = pd.DataFrame(data)
 df["ARS"] = df["USD"] * dolar
